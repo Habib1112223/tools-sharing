@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "service_name": "Service Name",
+        "service_image": "https://static8.depositphotos.com/1040728/935/i/450/depositphotos_9352722-stock-photo-tool-set.jpg",
+        "service_provider": "service Provider Name",
+        "provider_email": "service provider email",
+        "area": "Service Area",
+        "description": "lorem"
+    },{
+        "id": 2,
+        "service_name": "Service Name",
+        "service_image": "https://static8.depositphotos.com/1040728/935/i/450/depositphotos_9352722-stock-photo-tool-set.jpg",
+        "service_provider": "service Provider Name",
+        "provider_email": "service provider email",
+        "area": "Service Area",
+        "description": "lorem"
+    },{
+        "id": 3,
+        "service_name": "Service Name",
+        "service_image": "https://static8.depositphotos.com/1040728/935/i/450/depositphotos_9352722-stock-photo-tool-set.jpg",
+        "service_provider": "service Provider Name",
+        "provider_email": "service provider email",
+        "area": "Service Area",
+        "description": "lorem"
+    },{
+        "id": 4,
+        "service_name": "Service Name",
+        "service_image": "https://static8.depositphotos.com/1040728/935/i/450/depositphotos_9352722-stock-photo-tool-set.jpg",
+        "service_provider": "service Provider Name",
+        "provider_email": "service provider email",
+        "area": "Service Area",
+        "description": "lorem"
+    },{
+        "id": 5,
+        "service_name": "Service Name",
+        "service_image": "https://static8.depositphotos.com/1040728/935/i/450/depositphotos_9352722-stock-photo-tool-set.jpg",
+        "service_provider": "service Provider Name",
+        "provider_email": "service provider email",
+        "area": "Service Area",
+        "description": "lorem"
+    },{
+        "id": 6,
+        "service_name": "Service Name",
+        "service_image": "https://static8.depositphotos.com/1040728/935/i/450/depositphotos_9352722-stock-photo-tool-set.jpg",
+        "service_provider": "service Provider Name",
+        "provider_email": "service provider email",
+        "area": "Service Area",
+        "description": "lorem"
+    },{
+        "id": 7,
+        "service_name": "Service Name",
+        "service_image": "https://static8.depositphotos.com/1040728/935/i/450/depositphotos_9352722-stock-photo-tool-set.jpg",
+        "service_provider": "service Provider Name",
+        "provider_email": "service provider email",
+        "area": "Service Area",
+        "description": "lorem"
+    }
+]
