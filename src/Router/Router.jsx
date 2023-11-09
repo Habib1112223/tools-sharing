@@ -12,6 +12,7 @@ import MySchedules from "../Pages/MySchedules/MySchedules";
 import ServicePage from "../Pages/ServicePage/ServicePage";
 import ManageService from "../Pages/ManageService/ManageService";
 import BookService from "../Pages/BookService/BookService";
+import SingleService from "../Pages/SingleService/SingleService";
 
 const router = createBrowserRouter([
       {
@@ -56,8 +57,9 @@ const router = createBrowserRouter([
                   element: <MySchedules></MySchedules>
             },
             {
-                  path:'book/:id',
-                  element :<BookService></BookService>
+                  path:"/service/:id",
+                  loader: async({params}) => fetch(`https://y-rust-psi.vercel.app/services/${params.id}`),
+                  element: <SingleService></SingleService>
             },
             {
                   path:'/services/:id',

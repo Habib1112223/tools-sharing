@@ -12,14 +12,17 @@ const Register = () => {
       const [error, setError] = useState("");
       const navigate = useNavigate()
       useTitle("Register")
-      const handleRegister = e => {
-            e.preventDefault();
+      
+      const handleRegister = (e) => {
+            e.preventDefault()
+            console.log(e.currentTarget);
+            const form = new FormData(e.currentTarget)
 
-            const form = e.target;
-            const name = form.name.value;
-            const email = form.email.value;
-            const password = form.password.value;
-            const photo = form.photo.value;
+            const name = form.get('name');
+            const photo = form.get('photo');
+            const email = form.get('email');
+            const password = form.get('password');
+            console.log(name, photo, email, password);
 
             setPasswordError("")
             setError("")
@@ -51,7 +54,7 @@ const Register = () => {
                                     navigate('/', { replace: true })
                                     Swal.fire("Successfully Account Created")
                               })
-                              .catch(error => console.log(error.message))
+                              .catch(error => set(error.message))
 
                   })
                   .catch(error => {
@@ -92,7 +95,7 @@ const Register = () => {
                                                       required
                                                       name='name'
                                                       placeholder="Enter Your Name" className="input input-bordered border-amber-600" />
-                                                {/* {errors.email && <p className='text-red-600'>{errors.email?.message}</p>} */}
+                                             
                                           </div>
                                           <div className="form-control">
                                                 <label className="label">
@@ -104,7 +107,7 @@ const Register = () => {
                                                       name='email'
                                                       placeholder="Enter Your Email"
                                                       className="input input-bordered border-amber-600" />
-                                                {/* {errors.email && <p className='text-red-600'>{errors.email?.message}</p>} */}
+                                          
                                           </div>
                                           <div className="form-control">
                                                 <label className="label">
@@ -116,7 +119,7 @@ const Register = () => {
                                                       required
                                                       placeholder="Enter Your Photo URL"
                                                       className="input input-bordered border-amber-600" />
-                                                {/* {errors.email && <p className='text-red-600'>{errors.email?.message}</p>} */}
+                                                
                                           </div>
                                           <div className="form-control">
                                                 <label className="label">
@@ -133,11 +136,17 @@ const Register = () => {
                                                 </label>
                                                 <p className='text-red-500'>{passwordError}</p>
                                           </div>
+                                         
                                           <div className="form-control mt-6">
                                                 <button type="submit" className="btn btn-primary">Sign Up</button>
                                           </div>
                                     </form>
+                                    {
+                                          error && <p className="text-red-700">{error}</p>
+                                    }
+
                                     <p className="text-center">Already have an account?<Link className="text-purple-600 font-bold" to="/login">Login</Link></p>
+
                                     <div className="text-center">
                                           <button onClick={handleSignInWithGoogle} className="btn btn-outline text-amber-400 hover:bg-amber-500 font-bold px-10 py-1 m-4">google</button>
                                     </div>

@@ -22,23 +22,38 @@ const Login = () => {
             const form = new FormData(e.currentTarget)
             const email = form.get('email');
             const password = form.get('password');
+
+            setError("")
+            setError("")
+
+            if (password.length < 6) {
+                  setError("Password should be at least 6 characters.");
+                  return
+            } else if (!/[A-Z]/.test(password)) {
+                  setError('Your password should have at least one upper case characters.');
+                  return
+            } else if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)) {
+                  setError('Your password should have at least one special character.');
+            }
+
             signIn(email, password)
-                  .then(result => {
-                        Swal.fire('Successfully Login')
-                        navigate(from, { replace: true })
-                  })
-                  .catch(error => {
-                        setError(error.message)
-                  })
-      }
+            .then(result => {
+                  console.log(result)
+                  Swal.fire('Successfully Login')
+                  navigate(from, { replace: true })
+            })
+            .catch(error => {
+                  setError(error.message)
+            })
+}
 
       const handleSignInWithGoogle = () => {
             signInWithGoogle()
                   .then((result) => {
                         const user = result.user;
-                        navigate('/', { replace: true })
-                        Swal.fire("Successfully ")
-
+                        console.log(user);
+                        navigate(from, { replace: true })
+                        Swal.fire("Successfully")
                   })
                   .catch(error => setError(error.message))
       }
@@ -64,7 +79,7 @@ const Login = () => {
                                                       name='email'
                                                       placeholder="email"
                                                       className="input input-bordered border-amber-600" />
-                                                {/* {errors.email && <p className='text-red-600'>{errors.email?.message}</p>} */}
+                                                
                                           </div>
                                           <div className="form-control">
                                                 <label className="label">
@@ -79,6 +94,9 @@ const Login = () => {
                                                 <label className="label">
                                                       <Link href="#" className="label-text-alt link link-hover">Forgot password?</Link>
                                                 </label>
+                                                {
+                                                      error && <p className="text-red-700">{error}</p>
+                                                }
                                           </div>
                                           <div className="form-control mt-6">
                                                 <button type="submit" className="btn btn-primary">Login</button>
