@@ -15,7 +15,7 @@ const HomeServiceCard = ({service}) => {
                       <h2 className="text-2xl font-bold py-2">
                         {title}
                       </h2>
-                      <p className='py-2 text-gray-500'>{description.slice(0, 100)}</p>
+                      <p className='py-2 text-gray-500'>{description.slice(0, 90)}</p>
                       <div className='flex justify-between'>
                       <p className='text-xl'>Price: ${price}</p>
                       <p className='text-xl'>{serviceArea}</p>

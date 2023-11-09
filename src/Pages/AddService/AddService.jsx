@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import { postService } from '../../api/Services';
+import Swal from 'sweetalert2';
 
 const AddService = () => {
     const { user } = useContext(AuthContext)
@@ -28,7 +29,7 @@ const AddService = () => {
         postService(formData)
         .then((res) => {
                 if (res.acknowledged == true) {
-                    alert("Service added successfully");
+                    Swal.fire("Successfully added service")
                 }
             })
             .catch(console.error())
