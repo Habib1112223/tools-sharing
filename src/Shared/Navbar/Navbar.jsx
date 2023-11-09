@@ -22,7 +22,7 @@ const Header = () => {
     }
 
     return (
-        <header className='bg-[#192675] py-5 shadow-blue-900' >
+        <header className='bg-[#192675] py-5 shadow-blue-900' data-aos="fade-down" >
             <nav className='lg:w-10/12 px-4 mx-auto flex justify-between items-center text-white uppercase'>
                 {/* Desktop */}
                 <div className='hidden lg:block w-3/12'>

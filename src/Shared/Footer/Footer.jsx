@@ -1,7 +1,7 @@
 const Footer = () => {
       return (
             <div>
-                  <footer className="footer px-10 py-4 border-t bg-teal-500 text-base-content border-teal-300">
+                  <footer className="footer px-10 py-4 border-t bg-teal-500 text-base-content border-teal-300" data-aos="zoom-in">
                         <aside className="items-center grid-flow-col">
                               <div className='hidden lg:block w-3/12'>
                                     <h2 className='flex'>
@@ -19,7 +19,7 @@ const Footer = () => {
                               </div>
                         </nav>
                   </footer>
-                  <footer className="footer p-10 bg-teal-300 text-base-content">
+                  <footer className="footer p-10 bg-teal-300 text-base-content" data-aos="zoom-in">
                         <nav>
                               <header className="footer-title">INFORMATION</header>
                               <a className="link link-hover">HOME</a>

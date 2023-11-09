@@ -1,0 +1,34 @@
+
+    [
+        {
+          "id": 1,
+          "image_url": "https://i.ibb.co/p1Hv71g/cp-1.jpg",
+          "customer_name": "Alice Johnson",
+          "description": "I love the Tools Sharing Website! It's made borrowing tools so convenient and cost-effective. I've saved a lot of money and space in my garage. Highly recommended!",
+          "date": "2023-10-15"
+        },
+        {
+          "id": 2,
+          "image_url": "https://i.ibb.co/LPqTCRt/cp-2.jpg",
+          "customer_name": "John Smith",
+          "description": "This website is a game-changer. I've borrowed tools for several DIY projects, and it's been a fantastic experience every time. The variety of tools available is impressive.",
+          "date": "2023-09-28"
+        },
+        {
+          "id": 3,
+          "image_url": "https://i.ibb.co/Ryq6VG4/cp-3.jpg",
+          "customer_name": "Sarah Miller",
+          "description": "Tools Sharing has been a lifesaver. The community here is helpful, and I've received excellent guidance from experienced tool owners. It's like having a network of DIY experts at your fingertips.",
+          "date": "2023-08-12"
+        },
+        {
+          "id": 4,
+          "image_url": "https://i.ibb.co/1Kd1jWb/cp-4.jpg",
+          "customer_name": "Michael Brown",
+          "description": "I was skeptical at first, but I'm glad I gave it a try. The process of borrowing and returning tools is straightforward, and the website's support team is responsive. Great concept!",
+          "date": "2023-07-02"
+        }
+      
+      ]
+    
+    

@@ -1,8 +1,8 @@
 import Pricing from "../../components/Pricing/Pricing";
 import HomeServices from "../../components/Services/HomeServices";
+import Testimonial from "../../components/Testimonial/Testimonial";
 import useTitle from "../../hooks/useTitle";
 import Accordion from "./Accordion/Accordion";
-import ServiceCall from "./ServiceCall/ServiceCall";
 import Slider from "./Slider/Slider";
 
 
@@ -13,7 +13,7 @@ const Home = () => {
                   <Slider></Slider>
                   <HomeServices></HomeServices>
                   <Pricing></Pricing>
-                  <ServiceCall></ServiceCall>
+                  <Testimonial></Testimonial>
                   <Accordion></Accordion>
             </div>
       );

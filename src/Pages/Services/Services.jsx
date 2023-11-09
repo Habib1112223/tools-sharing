@@ -34,7 +34,7 @@ const Services = () => {
       refetch()
 
       return (
-            <div className="lg:w-10/12 mx-auto py-6 px-2 lg:py-10">
+            <div className="lg:w-10/12 mx-auto py-6 px-2 lg:py-10"data-aos="zoom-in-right">
                   <div className="mb-10 w-6/12 mx-auto">
                         <input
                               type="text"
@@ -60,4 +60,3 @@ const Services = () => {
 };
 
 export default Services;
-F

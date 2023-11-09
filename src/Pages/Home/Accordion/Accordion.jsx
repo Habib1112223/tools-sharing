@@ -1,6 +1,6 @@
 const Accordion = () => {
       return (
-            <div >
+            <div  >
                   <div>
                         <h2 className="text-3xl text-center font-bold text-teal-700 mb-8">Our Accordion Session</h2>
                   </div>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Pricing = () => {
     return (
-        <div className='pricing w-10/12 mx-auto pb-10'>
+        <div className='pricing w-10/12 mx-auto pb-10' data-aos="fade-up-right">
             <h1 className="text-accent text-center">pricing</h1>
             <p className="fs-500 text-center">plans that work for everyone</p>
             <div className="grid lg:grid-cols-3 flow-content mt-20">
