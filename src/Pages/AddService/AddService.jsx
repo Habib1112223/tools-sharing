@@ -27,9 +27,16 @@ const AddService = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         postService(formData)
-        .then((res) => {
+            .then((res) => {
                 if (res.acknowledged == true) {
                     Swal.fire("Successfully added service")
+                    setFormData({
+                        image: '',
+                        title: '',
+                        price: '',
+                        serviceArea: '',
+                        description: '',
+                      });
                 }
             })
             .catch(console.error())
@@ -37,30 +44,34 @@ const AddService = () => {
 
     return (
         <div className='w-8/12 mx-auto py-20'>
-            <h1 className="text-2xl mb-4">Add Service</h1>
+            <h1 className="text-5xl mb-8 font-bold text-center  text-slate-700 ">Add A Service</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                    <label className="block">Picture URL of the Service</label>
+                    <label className="block text-2xl text-teal-700 font-semibold">Picture URL of the Service</label>
                     <input
                         type="text"
                         name="image"
+                        required
+                        placeholder='Your picture URL'
                         value={formData.image}
                         onChange={handleChange}
                         className="border border-gray-300 p-2 rounded-md w-full"
                     />
                 </div>
                 <div>
-                    <label className="block">Service Name</label>
+                    <label className="block text-2xl text-teal-700 font-semibold">Service Name</label>
                     <input
                         type="text"
                         name="title"
+                        required
+                        placeholder='Your service name'
                         value={formData.title}
                         onChange={handleChange}
                         className="border border-gray-300 p-2 rounded-md w-full"
                     />
                 </div>
                 <div>
-                    <label className="block">Your name</label>
+                    <label className="block text-2xl text-teal-700 font-semibold">Your name</label>
                     <input
                         type="text"
                         value={user.displayName}
@@ -69,7 +80,7 @@ const AddService = () => {
                     />
                 </div>
                 <div>
-                    <label className="block">Your email</label>
+                    <label className="block text-2xl text-teal-700 font-semibold">Your email</label>
                     <input
                         type="text"
                         value={user.email}
@@ -78,37 +89,45 @@ const AddService = () => {
                     />
                 </div>
                 <div>
-                    <label className="block">Price</label>
+                    <label className="block text-2xl text-teal-700 font-semibold">Price</label>
                     <input
                         type="number"
                         name="price"
+                        required
+                        placeholder='Your price'
                         value={formData.price}
                         onChange={handleChange}
                         className="border border-gray-300 p-2 rounded-md w-full"
                     />
                 </div>
                 <div>
-                    <label className="block">Service Area</label>
+                    <label className="block text-2xl text-teal-700 font-semibold">Service Area</label>
                     <input
                         type="text"
                         name="serviceArea"
+                        required
+                        placeholder='Your service area'
                         value={formData.serviceArea}
                         onChange={handleChange}
                         className="border border-gray-300 p-2 rounded-md w-full"
                     />
                 </div>
                 <div>
-                    <label className="block">Description</label>
+                    <label className="block text-2xl text-teal-700 font-semibold">Description</label>
                     <textarea
                         name="description"
                         value={formData.description}
+                        required
+                        placeholder='Your description'
                         onChange={handleChange}
                         className="border border-gray-300 p-2 rounded-md w-full"
                     />
                 </div>
-                <button type="submit" className="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600">
-                    Add Service
-                </button>
+                <div className='mx-auto'>
+                    <button type="submit" className="bg-blue-500 text-lg mt-4 text-white rounded-md px-8 py-4 hover:bg-blue-600">
+                        Add Service
+                    </button>
+                </div>
             </form>
         </div>
     );

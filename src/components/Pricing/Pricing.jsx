@@ -37,10 +37,10 @@ const Pricing = () => {
                     <Link to="#" className="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600">Join Now</Link>
                 </div>
             </div>
-           <div className='text-center'>
-           <p className="fs-500 mb">Need something different? No problem!</p>
-            <Link to="#" className="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600">Get in touch</Link>
-           </div>
+            <div className='text-center'>
+                <p className="fs-500 mb">Need something different? No problem!</p>
+                <Link to="#" className="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600">Get in touch</Link>
+            </div>
 
         </div>
     )

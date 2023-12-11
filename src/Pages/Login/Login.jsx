@@ -9,7 +9,8 @@ import Swal from 'sweetalert2';
 
 const Login = () => {
       const navigate = useNavigate()
-      const { signIn, signInWithGoogle } = useContext(AuthContext);
+  
+      
       const [error, setError] = useState('');
       const location = useLocation();
 

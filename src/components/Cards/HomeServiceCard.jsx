@@ -15,7 +15,7 @@ const HomeServiceCard = ({service}) => {
                       <h2 className="text-2xl font-bold py-2">
                         {title}
                       </h2>
-                      <p className='py-2 text-gray-500'>{description.slice(0, 90)}</p>
+                      <p className='py-2 text-gray-500'>{description.slice(0, 100)}</p>
                       <div className='flex justify-between'>
                       <p className='text-xl'>Price: ${price}</p>
                       <p className='text-xl'>{serviceArea}</p>
@@ -29,12 +29,9 @@ const HomeServiceCard = ({service}) => {
                               {providerName}
                           </p>
                       </a>
-                      {
-                        user?.uid ? <Link to={`/services/${_id}`}>
+                       <Link to={`/services/${_id}`}>
                         <button className='bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600'>View Details</button>
-                      </Link>:   <Link to={`/login`}>
-                        <button className='bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600'>View Details</button>
-                      </Link>                   }
+                      </Link>
                   </footer>
   
               </article>

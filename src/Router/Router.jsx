@@ -13,6 +13,7 @@ import ServicePage from "../Pages/ServicePage/ServicePage";
 import ManageService from "../Pages/ManageService/ManageService";
 import BookService from "../Pages/BookService/BookService";
 import SingleService from "../Pages/SingleService/SingleService";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
       {
@@ -59,7 +60,7 @@ const router = createBrowserRouter([
             {
                   path:"/service/:id",
                   loader: async({params}) => fetch(`https://y-rust-psi.vercel.app/services/${params.id}`),
-                  element: <SingleService></SingleService>
+                  element: <PrivateRoute><SingleService></SingleService></PrivateRoute>
             },
             {
                   path:'/services/:id',

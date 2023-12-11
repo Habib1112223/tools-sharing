@@ -65,11 +65,22 @@ const Header = () => {
                                     </Link>
                                 )}
                             </Menu.Item>
+                            <Menu.Item>
+                                {({ active }) => (
+                                    <Link
+                                        to="/manageService"
+                                        className={`block px-4 py-2 text-sm font-semibold ${active ? 'bg-gray-100 text-red-500' : ''
+                                            } hover:bg-gray-100 hover:text-red-500 transition-colors duration-200`}
+                                    >
+                                        Manage Services
+                                    </Link>
+                                )}
+                            </Menu.Item>
                             {
                                 user?.uid &&
                                 <Menu as="li" className="relative list-none">
                                     <span>
-                                        <Menu.Button className="inline-flex w-full justify-center rounded-md bg-black/20 px-4 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+                                        <Menu.Button className="inline-flex w-full justify-center rounded-md bg-black px-4 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
                                             Dashboard
                                             <ChevronDownIcon
                                                 className="ml-2 -mr-1 h-5 w-5 text-violet-200 hover:text-violet-100"
@@ -90,21 +101,31 @@ const Header = () => {
                                             <Menu.Item>
                                                 {({ active }) => (
                                                     <Link
-                                                        to="/account"
+                                                        to="/my-services"
                                                         className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                                                     >
-                                                        Account
+                                                      My Service
                                                     </Link>
                                                 )}
                                             </Menu.Item>
                                             <Menu.Item>
                                                 {({ active }) => (
                                                     <Link
-                                                        href="#"
+                                                        to="/add-services"
                                                         className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                                                        onClick={handleSignOut}
+                                                       
                                                     >
-                                                        Sign out
+                                                        Add service
+                                                    </Link>
+                                                )}
+                                            </Menu.Item>
+                                            <Menu.Item>
+                                                {({ active }) => (
+                                                    <Link
+                                                        to="/my-schedules"
+                                                        className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                                                    >
+                                                        My Schedules
                                                     </Link>
                                                 )}
                                             </Menu.Item>

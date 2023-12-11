@@ -31,12 +31,9 @@ const ServiceCard = ({service}) => {
                               {providerName}
                           </p>
                       </a>
-                      {
-                        user?.uid ? <Link to={`/services/${_id}`}>
+                      <Link to={`/services/${_id}`}>
                         <button className='bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600'>View Details</button>
-                      </Link>:   <Link to={`/login`}>
-                        <button className='bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600'>View Details</button>
-                      </Link>                   }
+                      </Link>                 
                   </footer>
   
               </article>

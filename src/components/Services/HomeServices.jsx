@@ -3,6 +3,7 @@ import React from 'react'
 import HomeServiceCard from '../Cards/HomeServiceCard';
 import { Link } from 'react-router-dom';
 import { getServices } from '../../api/Services';
+import Loading from '../Loading/Loading';
 
 const HomeServices = () => {
     const { data: servicesData = [], isLoading, refetch } = useQuery({
@@ -14,7 +15,7 @@ const HomeServices = () => {
     })
 
     if (isLoading) {
-        return <h1>Loading</h1>
+        return <Loading></Loading>;
     }
 
 
